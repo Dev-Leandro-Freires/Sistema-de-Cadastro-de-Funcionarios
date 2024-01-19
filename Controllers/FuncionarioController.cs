@@ -16,6 +16,7 @@ public class FuncionarioController : ControllerBase
     public FuncionarioController(RHContext context, IConfiguration configuration)
     {
         _context = context;
+        // Por medidas de segurança, o valor de SAConnectionString utilizado é hipotético.
         _connectionString = configuration.GetValue<string>("ConnectionStrings:SAConnectionString");
         _tableName = configuration.GetValue<string>("ConnectionStrings:AzureTableName");
     }

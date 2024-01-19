@@ -3,9 +3,9 @@ using TrilhaNetAzureDesafio.Context;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// Por medidas de segurança, o valor de ConexaoPadrao utilizado é hipotético.
 builder.Services.AddDbContext<RHContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("ConexaoPadrao")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("ConexaoPadrao"))); 
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
